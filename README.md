@@ -48,31 +48,6 @@ health_wellness_agent/
 
 ---
 
-health_wellness_agent/
-├── main.py # Chainlit entrypoint
-├── context.py # UserContext definition
-├── agent_flow.py # Main agent config + handoffs
-├── hooks.py # Custom lifecycle hooks
-├── guardrails.py # Input validation logic
-├── tools/
-│ ├── goal_analyzer.py
-│ ├── meal_planner.py
-│ ├── workout_recommender.py
-│ ├── schedule_checkin.py
-│ └── update_progress.py
-├── health_agents/
-│ ├── escalation_agent.py
-│ ├── nutrition_expert_agent.py
-│ └── injury_support_agent.py
-├── utils/
-│ └── streaming.py # Streaming function for LLM responses
-├── .env # Your API keys
-├── .env.example # Sample environment file
-└── README.md # 📄 Project documentation
-
-
----
-
 ## ⚙️ Setup Instructions
 
 1. **Clone the repo**
