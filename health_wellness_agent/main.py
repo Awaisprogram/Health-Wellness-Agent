@@ -1,26 +1,16 @@
 # main.py
 import chainlit as cl
-from agents import RunConfig
-from model import model,provider
-import os
-from dotenv import load_dotenv
+from model import config
 from context import UserContext
 from agent_flow import agent
 from utils.streaming import stream_response 
 from hooks import MyHooks 
 from typing import Optional, Dict
 
-
+# --- RunHook ---
 start_hook = MyHooks()
 
-config = RunConfig(
-  model = model,
-  
-  model_provider = provider,
-  tracing_disabled = True,
-)
-
-
+# --- Chainlit configuration ---
 @cl.oauth_callback
 def oauth_callback(
   provider_id: str,
