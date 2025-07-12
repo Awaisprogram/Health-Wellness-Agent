@@ -24,26 +24,30 @@
 ## 🧩 Project Structure
 
 health_wellness_agent/
-├── main.py # Chainlit entrypoint
-├── context.py # UserContext definition
-├── agent_flow.py # Main agent config + handoffs
-├── hooks.py # Custom lifecycle hooks
-├── guardrails.py # Input validation logic
-├── tools/
-│ ├── goal_analyzer.py
-│ ├── meal_planner.py
-│ ├── workout_recommender.py
-│ ├── schedule_checkin.py
-│ └── update_progress.py
-├── health_agents/
-│ ├── escalation_agent.py
-│ ├── nutrition_expert_agent.py
-│ └── injury_support_agent.py
+├── main.py                  # Chainlit app entrypoint
+├── agent_flow.py            # Agent and sub-agent configuration
+├── context.py               # UserContext model
+├── hooks.py                 # Custom lifecycle hooks
+├── guardrails.py            # Input guardrails for validation
+├── .env                     # Environment variables (API keys)
+├── .env.example             # Sample env template
+├── README.md                # Project documentation
+
+├── tools/                   # All functional tools
+│   ├── goal_analyzer.py
+│   ├── meal_planner.py
+│   ├── workout_recommender.py
+│   ├── schedule_checkin.py
+│   └── update_progress.py
+
+├── health_agents/           # Sub-agents for specific tasks
+│   ├── escalation_agent.py
+│   ├── nutrition_expert_agent.py
+│   └── injury_support_agent.py
+
 ├── utils/
-│ └── streaming.py # Streaming function for LLM responses
-├── .env # Your API keys
-├── .env.example # Sample environment file
-└── README.md # 📄 Project documentation
+│   └── streaming.py         # Handles token-based response streaming
+
 
 
 ---
