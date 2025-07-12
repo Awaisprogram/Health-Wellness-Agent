@@ -21,8 +21,9 @@
 
 ---
 
-## 🧩 Project Structure
+### 🧩 Project Structure
 
+```bash
 health_wellness_agent/
 ├── main.py                  # Chainlit app entrypoint
 ├── agent_flow.py            # Agent and sub-agent configuration
@@ -47,8 +48,7 @@ health_wellness_agent/
 
 ├── utils/
 │   └── streaming.py         # Handles token-based response streaming
-
-
+```
 
 ---
 
