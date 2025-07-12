@@ -56,27 +56,30 @@ health_wellness_agent/
 
 1. **Clone the repo**
    
+```bash
 git clone https://github.com/yourname/health-wellness-agent.git
 cd health-wellness-agent
+```
 
 2. **Install dependencies**
 
+```bash
 pip install -r requirements.txt
-
+```
 3. **Configure environment**
-
+```bash
 cp .env.example .env
-
+```
 Add your API keys inside .env:
-
+```bash
 GEMINI_API_KEY=your_gemini_key
 or
 OPENAI_API_KEY=your_openai_key
-
+```
 4. **Run Chainlit**
-   
+ ```bash  
 chainlit run main.py
-
+ ```
 ## 🧠 Agent & Tools Overview
 
 | Component              | Description                                              |
@@ -100,11 +103,11 @@ chainlit run main.py
 ## 🔐 Auth Support
 
 Integrated OAuth callback logic for GitHub and Google in Chainlit.
-
+```bash
 @cl.oauth_callback
 def oauth_callback(...):
     ** Logs authentication provider and user info**
-
+```
 ## 🛠️ Tech Stack
 
 🔗 Chainlit (Frontend UI & agent lifecycle)
