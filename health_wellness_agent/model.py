@@ -1,4 +1,4 @@
-from agents import OpenAIChatCompletionsModel, AsyncOpenAI
+from agents import OpenAIChatCompletionsModel, AsyncOpenAI,RunConfig
 from dotenv import load_dotenv
 import os
 
@@ -13,3 +13,9 @@ provider = AsyncOpenAI(
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
 )
 model = OpenAIChatCompletionsModel(openai_client=provider, model="gemini-2.0-flash")
+
+config = RunConfig(
+  model = model,
+  model_provider = provider,
+  tracing_disabled = True,
+)
